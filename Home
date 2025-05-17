@@ -1,10 +1,10 @@
-# ملف باسم main.py
-def main():
-    user_input = input("اكتب شيئاً: ")
-    if user_input.lower() == "hello":
-        print("Every time I spend with you feels shorter than a minute and more precious than a year.")
-    else:
-        print("لم تكتب hello")
+import streamlit as st
 
-if __name__ == "__main__":
-    main()
+st.title("My home LOLO")
+
+user_input = st.text_input("اكتب شيئاً:")
+
+if user_input.lower() == "hello":
+    st.write("Every time I spend with you feels shorter than a minute and more precious than a year.")
+elif user_input:
+    st.write("لم تكتب hello")
